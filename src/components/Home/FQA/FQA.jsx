@@ -48,8 +48,8 @@ const FQA = () => {
   `;
 
   return (
-    <div className="w-full bg-[#E7EBF1] py-20 mt-20">
-      <Container className="grid grid-cols-1 md:grid-cols-2 gap-5">
+    <div className="w-full bg-[#E7EBF1] py-20 mt-20 px-5 md:px-0">
+      <Container className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5">
         {/* Left Side - Text and Custom Collapse */}
         <div className="space-y-5">
           {/* Header */}
@@ -93,7 +93,7 @@ const FQA = () => {
 
         {/* Right Side - Image */}
         <div>
-          <div className="w-full md:w-[500px] h-full md:h-[500px] relative mx-auto">
+          <div className="w-full md:w-[500px] h-[500px] relative mx-auto">
             <Image
               src={collection3}
               alt="collections image"

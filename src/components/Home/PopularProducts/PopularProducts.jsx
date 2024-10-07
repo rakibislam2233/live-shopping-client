@@ -7,7 +7,6 @@ import product3 from "@/assest/product/product3.png";
 import product4 from "@/assest/product/product4.png";
 import product5 from "@/assest/product/product5.png";
 import product6 from "@/assest/product/product6.png";
-import Image from "next/image";
 import PopularProductCard from "./PopularProductCard";
 
 const PopularProducts = () => {
@@ -83,7 +82,7 @@ const PopularProducts = () => {
       image: product5,
       name: "Casual Pants",
       price: 180,
-    }
+    },
   ];
 
   return (
@@ -91,7 +90,9 @@ const PopularProducts = () => {
       <Container className="px-5 md:px-0">
         <PopularProductsHeader />
         <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-x-5 gap-y-10 my-5">
-          {products.map((product) =><PopularProductCard key={product.id} product={product}/>)}
+          {products.map((product) => (
+            <PopularProductCard key={product.id} product={product} />
+          ))}
         </div>
       </Container>
     </section>

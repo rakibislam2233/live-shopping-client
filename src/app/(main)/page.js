@@ -1,3 +1,4 @@
+import DeliveryInfo from '@/components/Home/DeliveryInfo/DeliveryInfo'
 import FQA from '@/components/Home/FQA/FQA'
 import HeroSection from '@/components/Home/HeroSection/HeroSection'
 import PopularCategory from '@/components/Home/PopularCategory/PopularCategory'
@@ -13,6 +14,7 @@ const page = () => {
       <PopularProducts/>
       <TopCollections/>
       <FQA/>
+      <DeliveryInfo/>
     </>
   )
 }
