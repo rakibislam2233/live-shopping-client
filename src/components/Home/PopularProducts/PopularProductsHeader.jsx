@@ -1,14 +1,15 @@
-import { PiArrowBendUpLeftLight } from "react-icons/pi";
-import { PiArrowBendUpRightLight } from "react-icons/pi";
-const PopularCategoryHeader = () => {
+import React from "react";
+import { PiArrowBendUpLeftLight, PiArrowBendUpRightLight } from "react-icons/pi";
+
+const PopularProductsHeader = () => {
   return (
     <div className="w-full">
       <div className="flex justify-between items-center">
         <div className="flex gap-3">
           <div className="w-2 h-24 bg-[#D43961] rounded-r-lg"></div>
           <div className="flex flex-col gap-2">
-            <h1 className="text-xl text-[#D43961] font-semibold">Category</h1>
-            <h1 className="text-5xl font-semibold">Browse By Category</h1>
+            <h1 className="text-xl text-[#D43961] font-semibold">Best Quality</h1>
+            <h1 className="text-5xl font-semibold">Get your Fashion Style</h1>
           </div>
         </div>
         <div className="flex justify-center items-center gap-4">
@@ -25,4 +26,4 @@ const PopularCategoryHeader = () => {
   );
 };
 
-export default PopularCategoryHeader;
+export default PopularProductsHeader;
