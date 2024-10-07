@@ -90,7 +90,7 @@ const PopularProducts = () => {
     <section className="w-full mt-24">
       <Container className="px-5 md:px-0">
         <PopularProductsHeader />
-        <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-5 my-5">
+        <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-x-5 gap-y-10 my-5">
           {products.map((product) =><PopularProductCard key={product.id} product={product}/>)}
         </div>
       </Container>

@@ -10,12 +10,12 @@ const TopCollectionsHeader = () => {
           <h1 className="text-xl text-[#D43961] font-semibold">
           Top Quality
           </h1>
-          <h1 className="text-5xl font-semibold">Top-Selling Product of The
+          <h1 className="text-xl md:text-5xl font-semibold">Top-Selling Product of The
           year Collection</h1>
         </div>
       </div>
       <div className="border-2 border-[#c90739] p-0.5 rounded-lg">
-        <button className="bg-[#c90739] px-8 py-3 text-white rounded-md">
+        <button className="bg-[#c90739] px-8 py-1 md:py-3 text-white rounded-md text-sm ">
         Shop Now
         </button>
       </div>

@@ -8,7 +8,7 @@ const PopularCategoryHeader = () => {
           <div className="w-2 h-24 bg-[#D43961] rounded-r-lg"></div>
           <div className="flex flex-col gap-2">
             <h1 className="text-xl text-[#D43961] font-semibold">Category</h1>
-            <h1 className="text-5xl font-semibold">Browse By Category</h1>
+            <h1 className="text-xl md:text-5xl font-semibold">Browse By Category</h1>
           </div>
         </div>
         <div className="flex justify-center items-center gap-4">

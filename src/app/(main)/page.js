@@ -1,3 +1,4 @@
+import FQA from '@/components/Home/FQA/FQA'
 import HeroSection from '@/components/Home/HeroSection/HeroSection'
 import PopularCategory from '@/components/Home/PopularCategory/PopularCategory'
 import PopularProducts from '@/components/Home/PopularProducts/PopularProducts'
@@ -11,6 +12,7 @@ const page = () => {
       <PopularCategory/>
       <PopularProducts/>
       <TopCollections/>
+      <FQA/>
     </>
   )
 }
