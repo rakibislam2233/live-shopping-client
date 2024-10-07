@@ -87,14 +87,14 @@ const PopularProducts = () => {
   ];
 
   return (
-    <div className="w-full mt-24">
+    <section className="w-full mt-24">
       <Container className="px-5 md:px-0">
         <PopularProductsHeader />
         <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-5 my-5">
           {products.map((product) =><PopularProductCard key={product.id} product={product}/>)}
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

@@ -6,7 +6,7 @@ import {
 
 const PopularProductsHeader = () => {
   return (
-    <div className="w-full">
+    <section className="w-full">
       <div className="flex justify-between items-center">
         <div className="flex gap-3">
           <div className="w-2 h-24 bg-[#D43961] rounded-r-lg"></div>
@@ -24,7 +24,7 @@ const PopularProductsHeader = () => {
         </div>
       </div>
       <div className="border-b border-[#C6D0DF] my-6"></div>
-    </div>
+    </section>
   );
 };
 

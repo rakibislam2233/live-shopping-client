@@ -7,30 +7,36 @@ import category3 from "@/assest/category/category3.png";
 import category4 from "@/assest/category/category4.png";
 import category5 from "@/assest/category/category5.png";
 import category6 from "@/assest/category/category6.png";
-import Image from "next/image";
+import PopularCategoryCard from "./PopularCategoryCard";
 const PopularCategory = () => {
-  const images = [
+  const categories = [
     {
+      id:1,
       title: "Apparel",
       image: category1,
     },
     {
+      id:2,
       title: "Bedding",
       image: category2,
     },
     {
+      id:3,
       title: "Electronics",
       image: category3,
     },
     {
+      id:4,
       title: "Furniture",
       image: category4,
     },
     {
+      id:5,
       title: "Kitchen Product",
       image: category5,
     },
     {
+      id:6,
       title: "Bathroom Products",
       image: category6,
     },
@@ -40,24 +46,7 @@ const PopularCategory = () => {
       <Container className="px-5 md:px-0">
         <PopularCategoryHeader />
         <div className="w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5">
-          {images.map((item) => (
-            <div
-              key={item.title}
-              className="w-full flex flex-col items-center justify-center gap-2 bg-[#E7EBF1] hover:bg-[#D43961]  space-y-2 p-5 rounded-2xl group duration-500 transition-all cursor-pointer "
-            >
-              <div className="w-full h-[240px]  relative">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  className="rounded-md"
-                  fill
-                />
-              </div>
-              <h3 className="text-sm font-semibold text-gray-800 group-hover:text-white">
-                {item.title}
-              </h3>
-            </div>
-          ))}
+          {categories.map((category) => <PopularCategoryCard key={category.id} category={category}/>)}
         </div>
       </Container>
     </div>
