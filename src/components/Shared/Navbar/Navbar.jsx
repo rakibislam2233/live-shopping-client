@@ -39,9 +39,9 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="flex justify-center items-center gap-5">
-          <div>
-            <div className="flex items-center gap-1 text-white">
-              <IoIosSearch className="size-5" />
+          <div className="mt-5">
+            <div className="flex items-center  ">
+              <IoIosSearch size={22} />
               <input
                 type="text"
                 name="search"
@@ -50,7 +50,7 @@ const Navbar = () => {
                 placeholder="What are you looking for?"
               />
             </div>
-            <hr className="mt-1" />
+            <div className="w-full h-[1px] bg-[#90A3C0] my-2" />
           </div>
           <div className="border-2 border-[#c90739] p-0.5 rounded-lg">
             <button className="bg-[#c90739] px-5 py-3 flex justify-center items-center gap-5 text-white rounded-md">
