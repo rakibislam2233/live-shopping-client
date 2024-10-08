@@ -5,6 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 import { GoDeviceCameraVideo } from "react-icons/go";
 
 import ActiveLink from "./ActiveLink";
+import Link from "next/link";
 const nav = [
   {
     path: "/",
@@ -27,9 +28,11 @@ const Navbar = () => {
   return (
     <section className="w-full hidden md:block bg-gradient-to-r from-[#e4ebeb] to-[#edeaea] sticky top-0">
       <Container className="flex items-center justify-between gap-5">
-        <div className="w-[160px] h-[100px] relative">
-          <Image fill src={logo} alt="logo" className="" />
-        </div>
+        <Link href="/">
+          <div className="w-[160px] h-[100px] relative">
+            <Image fill src={logo} alt="logo" className="" />
+          </div>
+        </Link>
         <ul className="h-[48px] flex justify-center items-center bg-white px-16 rounded-full gap-10">
           {nav.map(({ path, title }) => (
             <ActiveLink key={path} destination={path} title={title} />
