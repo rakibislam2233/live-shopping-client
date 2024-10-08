@@ -1,5 +1,4 @@
 import loginImage from "@/assest/auth/login.png";
-import Container from "@/components/Shared/Container/Container";
 import Image from "next/image";
 
 const Login = () => {
