@@ -46,7 +46,7 @@ const Cart = () => {
       dataIndex: "image",
       key: "image",
       render: (text, record) => (
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col md:flex-row items-center gap-3">
           <div className="relative">
             <Image
               width={80}
@@ -80,34 +80,14 @@ const Cart = () => {
       key: "quantity",
       render: (text, record) => (
         <div className="flex rounded overflow-hidden">
-          {/* Decrease button */}
-          <button
-            // disabled={product?.quantity === 1}
-            // onClick={() =>
-            //   dispatch(
-            //     decrementQuantity({
-            //       id: product.id,
-            //     })
-            //   )
-            // }
-            className="px-4 py-3 border-l border-t border-b rounded-l border-[#929292]"
-          >
+          <button className="px-4 py-3 border-l border-t border-b rounded-l border-[#929292]">
             <FiMinus className="size-3" />
           </button>
           <h1 className="border flex justify-center items-center px-5 py-2 text-sm border-[#929292]">
-            5
+            {record.quantity}
           </h1>
-          <button
-            // onClick={() =>
-            //   dispatch(
-            //     incrementQuantity({
-            //       id: product?.id,
-            //     })
-            //   )
-            // }
-            className="px-4 py-3 border-r border-t border-b rounded-r border-[#929292] bg-[#0D3676]"
-          >
-            <FiPlus className="size-3 text-white " />
+          <button className="px-4 py-3 border-r border-t border-b rounded-r border-[#929292] bg-[#0D3676]">
+            <FiPlus className="size-3 text-white" />
           </button>
         </div>
       ),
@@ -154,21 +134,62 @@ const Cart = () => {
   return (
     <section className="w-full px-5 md:px-0 my-10">
       <Container>
-        <div className="mb-6">
-          <span className="text-gray-400">Home</span> / <span>Cart</span>
+        {/* Breadcrumb */}
+        <div className="mb-6 text-gray-400">
+          <span>Home</span> / <span>Cart</span>
         </div>
 
-        {/* Ant Design Table */}
-        <div className="shadow px-16 py-8 rounded-lg space-y-5">
-          <Table
+        {/* Responsive Table Wrapper */}
+        <div className="shadow px-4 py-8 md:px-16 md:py-8 rounded-lg space-y-8">
+         <div className="overflow-x-auto">
+         <Table
             columns={columns}
             dataSource={products}
             pagination={false}
             components={customTableComponents} // Apply custom table components for styling
           />
-          <div className="flex justify-between items-center">
-            <button className="px-5 py-2 rounded-lg border flex justify-center items-center gap-3"><PiArrowBendUpLeftLight size={20}/> <span>Return To Shop</span></button>
-            <button className="px-5 py-2 bg-[#C90739] rounded-xl text-white">Update Cart</button>
+         </div>
+
+          {/* Buttons Section */}
+          <div className="flex flex-col md:flex-row gap-6 justify-between items-center">
+            {/* Return to Shop Button */}
+            <button className="w-full md:w-auto px-5 py-2 rounded-lg border flex justify-center items-center gap-3">
+              <PiArrowBendUpLeftLight size={20} />
+              <span>Return To Shop</span>
+            </button>
+
+            {/* Update Cart Button */}
+            <button className="w-full md:w-auto px-5 py-2 bg-[#C90739] rounded-xl text-white">
+              Update Cart
+            </button>
+          </div>
+
+          {/* checkout section */}
+          <div className="flex justify-end items-center">
+            <div className="w-96 border border-[#606060] rounded-xl p-5">
+              <h1 className="font-semibold">Cart Total</h1>
+              <div className="my-7 space-y-3">
+                <div className="flex justify-between items-center ">
+                  <h1>Total Fee : </h1>
+                  <span className="font-semibold">$0.00</span>
+                </div>
+                <div className="border border-[#B3B3B3" />
+                <div className="flex justify-between items-center ">
+                  <h1>Shipping Fee: </h1>
+                  <span className="font-semibold">$0.00</span>
+                </div>
+                <div className="border border-[#B3B3B3" />
+                <div className="flex justify-between items-center ">
+                  <h1>Subtotal Fee : </h1>
+                  <span className="font-semibold">$0.00</span>
+                </div>
+              </div>
+              <div className="border-2 border-[#c90739] p-0.5 rounded-lg">
+                <button className="w-full  bg-[#c90739] px-12 py-3 text-white rounded-md">
+                Process to Checkout
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </Container>
