@@ -1,11 +1,8 @@
+import AddAddress from '@/components/AddAddress/AddAddress'
 import React from 'react'
 
 const page = () => {
-  return (
-    <div>
-      <h1>Add Address</h1>
-    </div>
-  )
+  return <AddAddress/>
 }
 
 export default page
