@@ -1,5 +1,6 @@
 import loginImage from "@/assest/auth/login.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Login = () => {
   return (
@@ -38,7 +39,7 @@ const Login = () => {
               <input type="checkbox" id="rememberMe" name="rememberMe" />
               <label htmlFor="rememberMe">Remember Me</label>
             </div>
-             <h1 className="underline">Forgot password?</h1>
+             <Link href="/forgot-password" className="underline">Forgot password?</Link>
             </div>
             <div className="mt-5">
               <button
