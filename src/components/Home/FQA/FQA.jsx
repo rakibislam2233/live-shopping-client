@@ -48,7 +48,7 @@ const FQA = () => {
   `;
 
   return (
-    <section className="w-full bg-[#E7EBF1] py-20 mt-20 px-5 md:px-0">
+    <section className="w-full h-full md:h-[700px]  bg-[#E7EBF1] py-20 mt-20 px-5 md:px-0">
       <Container className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-5">
         {/* Left Side - Text and Custom Collapse */}
         <div className="space-y-5">
