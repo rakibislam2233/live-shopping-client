@@ -8,7 +8,7 @@ import star2 from "@/assest/banner/star2.png";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-full md:h-[88vh] bg-gradient-to-r from-[#e4ebeb] to-[#edeaea] overflow-hidden px-5">
+    <section className="relative w-full h-full md:h-[88vh] bg-gradient-to-r from-[#e4ebeb] to-[#edeaea] overflow-hidden px-5">
       <Container className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
         {/* Left side - Text and Button */}
         <div className="mt-0 md:mt-40">
@@ -68,7 +68,7 @@ const HeroSection = () => {
           <h1 c></h1>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

@@ -26,7 +26,7 @@ const TopCollections = () => {
     },
   ];
   return (
-    <div className="w-full h-full md:h-[700px] mt-24 ">
+    <section className="w-full h-full md:h-[700px] mt-24 ">
       <Container className="px-5 md:px-0">
         <TopCollectionsHeader />
         <div className="w-full grid grid-cols-1 md:grid-cols-4 gap-5">
@@ -49,7 +49,7 @@ const TopCollections = () => {
           }
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 

@@ -5,7 +5,7 @@ import money from "@/assest/delivery/money.png";
 import Image from "next/image";
 const DeliveryInfo = () => {
   return (
-    <div className="w-full my-24">
+    <section className="w-full my-24">
       <Container className="px-5 md:px-0 grid grid-cols-1 md:grid-cols-3 gap-10">
         <div className="w-full h-56 rounded-xl border-r-4 border-l-4 border-[#0D3676] bg-[#E7EBF1] flex justify-center items-center">
           <div className="space-y-2 text-center">
@@ -50,7 +50,7 @@ const DeliveryInfo = () => {
           </div>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
 
