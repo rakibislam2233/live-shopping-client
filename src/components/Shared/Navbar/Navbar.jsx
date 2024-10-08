@@ -26,14 +26,14 @@ const nav = [
 ];
 const Navbar = () => {
   return (
-    <section className="w-full hidden md:block bg-gradient-to-r from-[#e4ebeb] to-[#edeaea] sticky top-0">
+    <section className="w-full hidden md:block bg-gradient-to-r from-[#e4ebeb] to-[#edeaea] ">
       <Container className="flex items-center justify-between gap-5">
         <Link href="/">
           <div className="w-[160px] h-[100px] relative">
             <Image fill src={logo} alt="logo" className="" />
           </div>
         </Link>
-        <ul className="h-[48px] flex justify-center items-center bg-white px-16 rounded-full gap-10">
+        <ul className="h-[48px] flex justify-center items-center bg-[#F5F7F7] px-16 rounded-full gap-10">
           {nav.map(({ path, title }) => (
             <ActiveLink key={path} destination={path} title={title} />
           ))}

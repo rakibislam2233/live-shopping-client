@@ -8,7 +8,7 @@ const ActiveLink = ({ destination,title}) => {
   return (
    <Link href={destination} className="group">
    <div className="w-full h-[3px] bg-[#0d3676] rounded-b-2xl opacity-0 group-hover:opacity-100 duration-300 transition-all"></div>
-   <li className="font-semibold  border-white text-[15px] group-hover:translate-y-0.5   duration-300 transition-all">{title}</li>
+   <li className="font-semibold  border-white text-[15px] group-hover:translate-y-0.5   duration-300 transition-all border-t-4">{title}</li>
    </Link>
   );
 };
