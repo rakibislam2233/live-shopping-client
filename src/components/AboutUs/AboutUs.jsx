@@ -6,6 +6,8 @@ import member1 from "@/assest/about/member1.png";
 import member2 from "@/assest/about/member3.png";
 import member3 from "@/assest/about/member4.png";
 import { FiFacebook, FiInstagram, FiLinkedin } from "react-icons/fi";
+import FQA from "../Home/FQA/FQA";
+import DeliveryInfo from "../Home/DeliveryInfo/DeliveryInfo";
 
 const AboutUs = () => {
   return (
@@ -108,6 +110,8 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+      <FQA/>
+      <DeliveryInfo/>
     </>
   );
 };
