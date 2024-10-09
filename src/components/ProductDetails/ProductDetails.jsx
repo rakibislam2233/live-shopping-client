@@ -3,6 +3,8 @@ import { Breadcrumb } from "antd";
 import Container from "../Shared/Container/Container";
 import ProductDetailsImages from "./ProductDetailsImages";
 import ProductDetailsInformation from "./ProductDetailsInformation";
+import ProductDetailsOtherInformation from "./ProductDetailsOtherInformation";
+import RelatedProducts from "./RelatedProducts";
 
 const ProductDetails = ({ productId }) => {
   console.log(productId);
@@ -13,10 +15,12 @@ const ProductDetails = ({ productId }) => {
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>Product</Breadcrumb.Item>
         </Breadcrumb>
-       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 my-10">
-        <ProductDetailsImages/>
-        <ProductDetailsInformation/>
-       </div>
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 my-10">
+          <ProductDetailsImages />
+          <ProductDetailsInformation />
+        </div>
+        <ProductDetailsOtherInformation />
+        <RelatedProducts/>
       </Container>
     </section>
   );

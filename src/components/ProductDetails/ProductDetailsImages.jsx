@@ -1,3 +1,4 @@
+'use client'
 import product from "@/assest/product/product6.png";
 import product1 from "@/assest/product/product1.png";
 import product2 from "@/assest/product/product2.png";
