@@ -1,3 +1,4 @@
+import ProductDetails from "@/components/ProductDetails/ProductDetails";
 
 export async function generateMetadata({params}) {
     const {productId} = params;
@@ -5,9 +6,8 @@ export async function generateMetadata({params}) {
 
 
 const page = ({params}) => {
-  return (
-    <div>page</div>
-  )
+  const {productId} = params;
+  return <ProductDetails productId={productId}/>
 }
 
 export default page
