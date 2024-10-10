@@ -1,3 +1,5 @@
+import CustomButton from "@/utils/CustomButton";
+import Link from "next/link";
 import React from "react";
 import {
   PiArrowBendUpLeftLight,
@@ -14,13 +16,15 @@ const PopularProductsHeader = () => {
             <h1 className="text-xl text-[#D43961] font-semibold">
               Best Quality
             </h1>
-            <h1 className="text-xl md:text-5xl font-semibold">Get your Fashion Style</h1>
+            <h1 className="text-xl md:text-5xl font-semibold">
+              Get your Fashion Style
+            </h1>
           </div>
         </div>
-        <div className="border-2 border-[#c90739] p-0.5 rounded-lg">
-          <button className="bg-[#c90739] px-5 py-1 md:py-3 text-white rounded-md text-sm">
-           View All Product
-          </button>
+        <div>
+          <Link href="/product">
+            <CustomButton border>View All Product</CustomButton>
+          </Link>
         </div>
       </div>
       <div className="border-b border-[#C6D0DF] my-6"></div>

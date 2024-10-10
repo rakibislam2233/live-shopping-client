@@ -57,7 +57,7 @@ const LiveStream = () => {
                 Your browser does not support the video tag.
               </video>
             </div>
-            <div className="w-full flex flex-wrap justify-between gap-3 items-center mt-8">
+            <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-3 items-center mt-8">
               {[
                 {
                   title: "Woman Pant",
@@ -136,7 +136,7 @@ const LiveStream = () => {
         </div>
       </Container>
       <Recommended />
-      <PastLive/>
+      <PastLive />
     </section>
   );
 };

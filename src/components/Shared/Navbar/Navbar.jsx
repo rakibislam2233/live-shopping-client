@@ -6,6 +6,7 @@ import { GoDeviceCameraVideo } from "react-icons/go";
 
 import ActiveLink from "./ActiveLink";
 import Link from "next/link";
+import CustomButton from "@/utils/CustomButton";
 const nav = [
   {
     path: "/",
@@ -52,16 +53,16 @@ const Navbar = () => {
             </div>
             <div className="w-full h-[1px] bg-[#90A3C0] my-2" />
           </div>
-          <div className="border-2 border-[#c90739] p-0.5 rounded-lg">
-            <button className="bg-[#c90739] px-5 py-3 flex justify-center items-center gap-5 text-white rounded-md">
+          <div>
+            <CustomButton border>
               <GoDeviceCameraVideo className="size-5" />
               <span>LIVE STREAM</span>
-            </button>
+            </CustomButton>
           </div>
-          <div className="border-2 border-[#c90739] p-0.5 rounded-lg">
-            <button className="bg-[#c90739] px-12 py-3 text-white rounded-md">
-              LOGIN
-            </button>
+          <div>
+            <Link href="/login" className="w-full">
+              <CustomButton border>Login</CustomButton>
+            </Link>
           </div>
         </div>
       </Container>
