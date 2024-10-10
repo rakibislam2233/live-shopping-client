@@ -5,6 +5,8 @@ import visa from "@/assest/cardInfo/visa.png";
 import master from "@/assest/cardInfo/mastercard.png";
 import paypal from "@/assest/cardInfo/paypal.png";
 import google from "@/assest/cardInfo/google.png";
+import CustomButton from "@/utils/CustomButton";
+import Link from "next/link";
 const Checkout = () => {
   const product = {
     key: "1",
@@ -31,11 +33,9 @@ const Checkout = () => {
                   Select delivery address
                 </h1>
               </div>
-              <div className="border-2 border-[#c90739] p-0.5 rounded-lg">
-                <button className="bg-[#c90739] px-5 py-2 text-white rounded-md">
-                  Add New Address
-                </button>
-              </div>
+              <Link href="/add-address">
+                <CustomButton border>Add New Address</CustomButton>
+              </Link>
             </div>
             <div className="flex flex-col gap-5 my-10">
               <DeliveryInfoCard />
@@ -103,11 +103,9 @@ const Checkout = () => {
                 <div className="size-4 rounded-full ring-2 ring-[#0D3676]"></div>
                 <h1 className="font-semibold">Cash On Delivery</h1>
               </div>
-              <div className="border-2 border-[#c90739] p-0.5 rounded-lg mt-5">
-                <button className="w-full  bg-[#c90739] px-12 py-3 text-white rounded-md">
+              <CustomButton border className="w-full">
                 Pay and Place Order
-                </button>
-              </div>
+              </CustomButton>
             </div>
           </div>
         </div>

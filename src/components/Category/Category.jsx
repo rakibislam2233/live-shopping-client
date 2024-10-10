@@ -72,12 +72,12 @@ const Category = () => {
     },
   ];
   return (
-    <section className="w-full my-10">
+    <section className="w-full my-10 px-5 md:px-0">
       <Container>
         <div className="flex items-center gap-2">
           <span className="text-gray-400">Home</span>
           <span>/</span>
-          <span>Categories</span>
+          <span>Category</span>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-x-5 gap-y-10 my-10">
           {categories.map((category) => (

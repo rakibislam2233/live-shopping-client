@@ -1,4 +1,6 @@
-'use client'
+"use client";
+import CustomButton from "@/utils/CustomButton";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 
@@ -87,14 +89,14 @@ const ProductDetailsInformation = () => {
 
         {/* Action Buttons */}
         <div className="mt-6 space-y-4">
-          <button className="w-full border-2 border-[#c90739] p-0.5 rounded-lg">
-            <button className="w-full bg-[#c90739] px-12 py-3 text-white rounded-md">
-              Buy Now
-            </button>
-          </button>
-          <button className="w-full py-3 bg-[#c90739] text-white  rounded-md">
-            Add to Cart
-          </button>
+          <CustomButton border className="w-full">
+            Buy Now
+          </CustomButton>
+          <div>
+            <Link href="/cart">
+              <CustomButton className="w-full">Add to Cart</CustomButton>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -4,6 +4,8 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 import Image from "next/image";
 import Container from "../Shared/Container/Container";
 import { PiArrowBendUpLeftLight } from "react-icons/pi";
+import CustomButton from "@/utils/CustomButton";
+import Link from "next/link";
 
 // Table customization styles
 const customStyles = {
@@ -141,14 +143,14 @@ const Cart = () => {
 
         {/* Responsive Table Wrapper */}
         <div className="shadow px-4 py-8 md:px-16 md:py-8 rounded-lg space-y-8">
-         <div className="overflow-x-auto">
-         <Table
-            columns={columns}
-            dataSource={products}
-            pagination={false}
-            components={customTableComponents} // Apply custom table components for styling
-          />
-         </div>
+          <div className="overflow-x-auto">
+            <Table
+              columns={columns}
+              dataSource={products}
+              pagination={false}
+              components={customTableComponents} // Apply custom table components for styling
+            />
+          </div>
 
           {/* Buttons Section */}
           <div className="flex flex-col md:flex-row gap-6 justify-between items-center">
@@ -184,10 +186,12 @@ const Cart = () => {
                   <span className="font-semibold">$0.00</span>
                 </div>
               </div>
-              <div className="border-2 border-[#c90739] p-0.5 rounded-lg">
-                <button className="w-full  bg-[#c90739] px-12 py-3 text-white rounded-md">
-                Process to Checkout
-                </button>
+              <div>
+                <Link href="/checkout">
+                  <CustomButton border className="w-full">
+                    Process to Checkout
+                  </CustomButton>
+                </Link>
               </div>
             </div>
           </div>
