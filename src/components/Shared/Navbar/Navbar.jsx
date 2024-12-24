@@ -46,7 +46,7 @@ const Navbar = () => {
       {/* Main container for large screens */}
       <Container className="hidden md:flex items-center justify-between gap-5 py-4">
         <Link href="/">
-          <div className="w-[160px] h-[100px] relative">
+          <div className="w-[140px] h-[80px] relative">
             <Image fill src={logo} alt="logo" className="" />
           </div>
         </Link>

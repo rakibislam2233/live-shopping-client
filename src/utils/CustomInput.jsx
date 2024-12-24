@@ -14,7 +14,7 @@ const CustomInput = ({ icon: Icon, label, placeholder, className, type = "text",
           <Input.Password
             prefix={Icon && <Icon className="text-gray-500 text-xl" />} // Dynamic icon
             placeholder={placeholder || "Enter password"} // Dynamic placeholder
-            className={`w-full px-4 py-2 text-[16px] bg-[#EEF3FF] text-gray-700 rounded-lg  ${className}`}
+            className={`w-full px-4 py-2 text-[16px] bg-[#EEF3FF] text-gray-700 rounded-lg   ${className}`}
             {...rest} // Additional props
           />
         ) : (

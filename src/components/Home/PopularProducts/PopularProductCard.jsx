@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const PopularProductCard = ({ product }) => {
+  console.log(product)
   return (
     <Link href="/product/12345">
       <div
@@ -23,7 +24,7 @@ const PopularProductCard = ({ product }) => {
             </button>
           </div>
         </div>
-        <h1 className="group-hover:hidden transition-all">{product.name}</h1>
+        <h1 className="group-hover:opacity-0 duration-500 transition-all">{product.name}</h1>
       </div>
     </Link>
   );
