@@ -101,7 +101,7 @@ const Navbar = () => {
        </div>
 
         {/* Drawer for Mobile Navigation */}
-        <Drawer title="Menu" placement="right" onClose={closeDrawer} visible={drawerVisible}>
+        <Drawer title="Menu" placement="right" onClose={closeDrawer} open={drawerVisible}>
           <ul className="space-y-4">
             {nav.map(({ path, title }) => (
               <li key={path} className="text-lg">

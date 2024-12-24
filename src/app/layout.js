@@ -1,4 +1,5 @@
 import { Inter, Open_Sans } from "next/font/google";
+import { ConfigProvider } from "antd";
 import "./globals.css";
 
 const inter_regular = Open_Sans({
@@ -14,8 +15,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body  className={`${inter_regular.className}}`}>
-        {children}
+      <body className={`${inter_regular.className}}`}>
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: "#C90739",
+            },
+          }}
+        >
+          {children}
+        </ConfigProvider>
       </body>
     </html>
   );

@@ -2,8 +2,9 @@ import logo from "@/assest/logo/logo.png";
 import Container from "../Container/Container";
 import { MdLocalPhone, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import Image from "next/image";
-import { FiFacebook, FiLinkedin, FiVoicemail } from "react-icons/fi";
+import { FiFacebook, FiInstagram, FiLinkedin, FiVoicemail } from "react-icons/fi";
 import { PiWhatsappLogo } from "react-icons/pi";
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="w-full py-20 bg-[#3D5E91] px-5 md:px-0">
@@ -18,12 +19,16 @@ const Footer = () => {
             reviews
           </h1>
           <div className="flex justify-center md:justify-start items-center gap-5">
-            <div className="bg-white size-12 rounded-full flex justify-center items-center">
-              <FiFacebook className="text-[#0D3676]" size={22} />
-            </div>
-            <div className="bg-white size-12 rounded-full flex justify-center items-center">
-              <FiLinkedin className="text-[#0D3676]" size={22} />
-            </div>
+            <Link href="https://www.facebook.com/Bargainsdepot" target="_blank">
+              <div className="bg-white size-12 rounded-full flex justify-center items-center">
+                <FiFacebook className="text-[#0D3676]" size={22} />
+              </div>
+            </Link>
+            <Link href="https://www.instagram.com/bargainsdepot/">
+              <div className="bg-white size-12 rounded-full flex justify-center items-center">
+                <FiInstagram className="text-[#0D3676]" size={22} />
+              </div>
+            </Link>
 
             <div className="bg-white size-12 rounded-full flex justify-center items-center">
               <PiWhatsappLogo className="text-[#0D3676]" size={22} />
@@ -58,7 +63,9 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h1 className="text-2xl font-semibold text-white text-center md:text-start">Quick Link</h1>
+          <h1 className="text-2xl font-semibold text-white text-center md:text-start">
+            Quick Link
+          </h1>
           <ul className="flex flex-col gap-4 mt-5 text-center md:text-start">
             <li>
               <a href="#" className="text-white hover:text-[#0D3676]">
@@ -78,7 +85,9 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h1 className="text-2xl font-semibold text-white text-center md:text-start">Contact</h1>
+          <h1 className="text-2xl font-semibold text-white text-center md:text-start">
+            Contact
+          </h1>
           <ul className="flex flex-col gap-4 mt-5 text-center md:text-start">
             <li className="flex justify-center md:justify-start items-center gap-2 text-white">
               <MdOutlineEmail size={20} />
